@@ -9,15 +9,17 @@
     $peixes = json_decode(file_get_contents($arquivo), true);
     $nome = trim($_POST['nome'] ?? ''); 
 
-    if ($nome !== '') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && $nome !== '') {
         $peixes[] = ["nome" => $nome];
         file_put_contents($arquivo, json_encode($peixes, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-        gerarListaPeixes($peixes);
-    } 
+    }
 
-   
+    // Retorna sempre a lista atualizada como JSON (GET ou POST)
+    echo json_encode($peixes, JSON_UNESCAPED_UNICODE);
+    exit;
 
 
+// Função para debug ou uso futuro em output HTML (não usada para a resposta JSON)
 function gerarListaPeixes($peixes) {
     $html = "<br/><h3>Peixes</h3>";
     foreach ($peixes as $key => $peixe) {
@@ -26,7 +28,6 @@ function gerarListaPeixes($peixes) {
         $html .= "<hr/>";
     }
     return $html;
-    print_r($peixes);
 }
 
 

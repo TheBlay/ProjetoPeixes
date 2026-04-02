@@ -5,7 +5,7 @@
 
 <style>
 .navBarSuperior {
- max-width: 80%;
+ max-width: 98%;
  padding: 10px;
   height: fit-content;
   border-radius:50px;
@@ -13,7 +13,10 @@
   color: #59c8e4;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-style: ridge;
-  background-color: #59c8e4;
+  background-color: #a8e3f1;
+  margin: auto;
+  justify-content: center;
+  inline-block: center;
 }
 .contain {
     border: 2px solid black;
@@ -21,9 +24,9 @@
     background-color: honeydew;
 }
 menu {
-    display: inline-block;
-    float: none;
-    position: relative;
+    display: flex;
+    gap: 10em;
+    justify-content: center;
     
 }
 
