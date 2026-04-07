@@ -42,8 +42,11 @@
                     '<ul>' + peixes.map(p => `<li>${p.nome}</li>`).join('') + '</ul>';
                 })
                 .catch(error => console.error('Erro:', error));
-
                 
+        }
+
+        function gerarHTML(p){
+           return `Nome: ${p.nome} <br>`
         }
         
         function carregarPeixes() {
@@ -51,7 +54,7 @@
                 .then(response => response.json())
                 .then(peixes => {
                     document.getElementById('listaPeixes').innerHTML =
-                    '<ul>' + peixes.map(p => `<li>${p.nome}</li>`).join('') + '</ul>';
+                    peixes.map(gerarHTML).join('');
                 })
                 .catch(error => console.error('Erro ao carregar:', error));
         }

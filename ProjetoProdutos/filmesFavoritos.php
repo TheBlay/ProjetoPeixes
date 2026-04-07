@@ -44,6 +44,14 @@
    
     lista = document.getElementById('listaFilmes');
 
+    function gerarHTML(f) {
+        return `<div class="elemento">
+                    <h2>${f.nome}</h2> <br>
+                    Descrição: ${f.descricao} <br>
+                    Gênero: ${f.genero}</div> <hr/>
+                `
+    }
+
     function cadastrarFilme()
     {
         const generoSelect = document.getElementById('genero');
@@ -68,17 +76,11 @@
     .then(response => response.json())
     .then(filme => {
             document.getElementById('listaFilmes').innerHTML =
-                filme.map(f =>
-                    `<div class="elemento">
-                    <h2>${f.nome}</h2> <br>
-                    Descrição: ${f.descricao} <br>
-                    Gênero: ${f.genero}</div> <hr/>
-                `).join('');
+                filme.map(gerarHTML).join('');
     })
     .catch(error => console.error('Erro: ', error));
     }
 
-    
 
     function carregarFilmes(){
         
@@ -86,12 +88,7 @@
             .then(response => response.json())
             .then(filme => {
                 document.getElementById('listaFilmes').innerHTML =
-                filme.map(f =>
-                    `<div class="elemento">
-                    <h2>${f.nome}</h2> <br>
-                    Descrição: ${f.descricao} <br>
-                    Gênero: ${f.genero}</div> <hr/>
-                `).join('');
+                filme.map(gerarHTML).join('');
                 
                 
             })
