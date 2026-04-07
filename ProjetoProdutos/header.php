@@ -4,43 +4,57 @@
 </head>
 
 <style>
+:root {
+    --cor-fundo-navbar: #C9B59C;
+    --cor-botoes-nav: #DCC5B2;
+    --fonte-botoes-nav: "Chango, sans-serif";
+    --cor-fonte-botoes-nav: black;
+}
 .navBarSuperior {
- max-width: 98%;
- padding: 10px;
-  height: fit-content;
-  border-radius:50px;
-  border-color: #0489d5;
-  color: #59c8e4;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-style: ridge;
-  background-color: #a8e3f1;
-  margin: auto;
-  justify-content: center;
-  inline-block: center;
+    max-width: 100dvh;
+    flex-wrap: wrap;
+    height: 70px;
+    border-radius:10px;
+    font-family: var(--fonte-botoes-nav);
+    background-color: var(--cor-fundo-navbar, #D2C4B4);
+    justify-content: space-around;
+    align-content: space-around;
+    display: flex;
+    gap: 7em;
+    
 }
 .contain {
     border: 2px solid black;
-    padding: 20px;
-    background-color: honeydew;
-}
-menu {
-    display: flex;
-    gap: 10em;
-    justify-content: center;
-    
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-size: 30px;
+    height: 70%;
+    width: 14%;
+    color: var(--cor-fonte-botoes-nav, black);
+    background-color: var(--cor-botoes-nav);
+    border-radius: 15px;
+    justify-content: space-around;
+    align-content: space-evenly;
+    display: inline-flex;
 }
 
-a {
+.contain:hover{
+    background-color: #dea575;
+    text-shadow: #fcfbfa;
+}
+
+a:not(.contain) {
   
-  justify-self: auto;
-  margin-block: 2;
-  font-size: large;
+  margin-block: 1px;
   
-} </style>
+}
+
+
+ </style>
+
 <div class="navBarSuperior">
-<menu>
     <a class="contain" href="index.php" >Home</a>
     <a class="contain" href="peixaria.php" >Peixaria</a>
     <a class="contain" href="filmesFavoritos.php" >Filmes</a>
-</menu>
+
 </div>

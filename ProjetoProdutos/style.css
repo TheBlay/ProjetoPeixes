@@ -1,29 +1,73 @@
-body {
-    
-    background-color: #f1f1f1;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-de-fundo: #FCE7C8;
+    --cor-titulo: #D9A299;
+    --fonte-titulo: Raleway;
 }
 
+body {
+    background-color: var(--cor-de-fundo);
+}
 
+.caixa {
+  border-bottom: #0b0704;
+  background-color: var(--cor-titulo);
+  max-width: 100%;
+  
+  max-height: fit-content;
+  padding-bottom: 0.5pc;
+  padding-top: 0.5pc;
+  padding-inline-start: 1pc;
+  border-top-right-radius: 2em;
+}
 
-div.header {
+.lista {
+  @extends .caixa;
+  display:block;
+  border-top-right-radius: 0%;
+  max-height: fit-content;
+  padding-bottom: 1pc;
+ 
+}
+/* Renomear para elemento da lista */
+
+ div.elemento { 
+  padding: 1vh;
+   padding-top: 0.5pc;
+  border-radius: 0.5em;
+  font-size: large;
+  background-color: #e9c8ad;
+  border-style: inset;
+  border-width: 3px;
+  border-left-color: rgb(255, 255, 255);
+  width: 400px;
+  min-height: max-content;
+  max-height:500px;
+}
+
+div.title {
     border-radius: 10;
-    background: #0489d5;
-    text-decoration: aliceblue;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    background: var(--cor-titulo);
+    font-family: var(--fonte-titulo, 'Times New Roman', Times, serif);
+    font-size: 3em;
+    padding-left: 1em;
+    border-top-right-radius: 3em;
+    max-width: 60%;
     color: bisque;
 }
 
-.bigContainer {
-    grid-column: 2 / -2;
-    display: grid;
-  grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 60px)) minmax(
-      20px,
-      1fr
-    );
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+textarea {
+  resize: none;
+  overflow: scroll;
+  min-height:30px;
+  max-height: 80px;
+  max-width: 180px;
+  width: 180px;
 }
+
+/*
   
   .dropdown-toggle {
     display: none;
@@ -54,3 +98,4 @@ div.header {
     padding: 10px;
     transition: max-height 0.3s ease-in;
   }
+*/

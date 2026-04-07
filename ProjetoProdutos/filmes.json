@@ -1,0 +1,42 @@
+[
+    {
+        "nome": "Titanic",
+        "descricao": "Navio caiu e machucou geral",
+        "genero": "terror"
+    },
+    {
+        "nome": "Abacaxi Sonico",
+        "descricao": "O Herói do Pós-Terra",
+        "genero": "aventura"
+    },
+    {
+        "nome": "Abacaxi Sonico 2",
+        "descricao": "O Herói do Pós-Terra: O Retorno",
+        "genero": "aventura"
+    },
+    {
+        "nome": "Tron",
+        "descricao": "A fúria",
+        "genero": "undefined"
+    },
+    {
+        "nome": "Judeus em chamas 3",
+        "descricao": "Filme muito legal demais Rock puro seloiro ta maluco mt bom",
+        "genero": "undefined"
+    },
+    {
+        "nome": "Caçadores de Demônios 2",
+        "descricao": "Esvaziando Israel",
+        "genero": "undefined"
+    },
+    {
+        "nome": "HAHAH",
+        "descricao": "Marambica",
+        "genero": "Gênero...\n                Terror\n                Ficção Científica\n                Romance\n                Drama\n                Comédia\n                Aventura\n                Ação"
+    },
+    {
+        "nome": "Baleia Azul",
+        "descricao": "Um filme que vai te emocionar até debaixo d'água...",
+        "genero": "Drama"
+    }
+]

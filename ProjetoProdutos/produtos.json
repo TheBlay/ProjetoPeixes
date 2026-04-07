@@ -1,0 +1,37 @@
+[
+    {
+        "nome": "Maçã",
+        "descricao": "Vermelha e redonda",
+        "preco": 4.99
+    },
+    {
+        "nome": "Superbond",
+        "descricao": "Grudento",
+        "preco": 9.9
+    },
+    {
+        "nome": "Prateleira",
+        "descricao": "Harelux 22 graus",
+        "preco": 1303
+    },
+    {
+        "nome": "Guarda-Roupas",
+        "descricao": "Big Size 1992",
+        "preco": 12.809
+    },
+    {
+        "nome": "Geladeira",
+        "descricao": "400cm",
+        "preco": 300
+    },
+    {
+        "nome": "Tecido",
+        "descricao": "Seda Azul Textech",
+        "preco": 209
+    },
+    {
+        "nome": "Tecido",
+        "descricao": "Veludo TexTech",
+        "preco": 1088.98
+    }
+]

@@ -1,11 +1,4 @@
-<?php  include_once 'header.php'; 
 
-session_status() === PHP_SESSION_NONE ? session_start() : null;
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +7,20 @@ session_status() === PHP_SESSION_NONE ? session_start() : null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peixaria</title>
 </head>
-<script>
+
+<body>
+    <?php  include_once 'header.php'; 
+?>
+<hr/><div class='title'>Registro de Peixes</div>
+	<div class="caixa">
+            <input id="nome" name="nome" placeholder="Nome">
+            <button onclick="cadastrarPeixe()">Adicionar Peixe</button>
+            <button onclick="carregarPeixes()">Atualizar Peixes</button>
+            
+    </div>
+    <div class="caixa lista" id="listaPeixes"></div>
+
+    <script>
     
      function cadastrarPeixe()
         {
@@ -39,7 +45,7 @@ session_status() === PHP_SESSION_NONE ? session_start() : null;
 
                 
         }
-
+        
         function carregarPeixes() {
             fetch('peixes.php', { method: 'GET' })
                 .then(response => response.json())
@@ -54,15 +60,5 @@ session_status() === PHP_SESSION_NONE ? session_start() : null;
             carregarPeixes();
         };
 </script>
-<body>
-<hr/><div class='header'>Registro de Peixes</div><br>
-	<div>
-            <input id="nome" name="nome" placeholder="Nome">
-            <button onclick="cadastrarPeixe()">Adicionar Peixe</button>
-            <button onclick="carregarPeixes()">Atualizar Peixes</button>
-            
-    </div>
-    <hr>
-    <div id="listaPeixes"></div>
 </body>
 </html>
