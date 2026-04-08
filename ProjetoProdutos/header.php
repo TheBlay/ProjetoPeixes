@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
-
+<script>localStorage.clear</script>
 <style>
 :root {
     --cor-fundo-navbar: #C9B59C;
@@ -10,24 +10,45 @@
     --fonte-botoes-nav: "Chango, sans-serif";
     --cor-fonte-botoes-nav: black;
 }
-.navBarSuperior {
+
+.navBarContainer {
+    display: grid;
+    grid-auto-flow: column;
+    
+    gap:1em;
+    max-width: max-content;
+    min-width: 100%;
+    min-height: 60px;
+    justify-content: space-between;
+    
+}
+
+.navBarSuperior, .configBarSuperior {
     max-width: 100dvh;
+    min-width: 50pc;
     flex-wrap: wrap;
-    height: 70px;
+    height: 60px;
     border-radius:10px;
     font-family: var(--fonte-botoes-nav);
     background-color: var(--cor-fundo-navbar, #D2C4B4);
     justify-content: space-around;
     align-content: space-around;
     display: flex;
-    gap: 7em;
+    gap: 6em;
     
 }
-.contain {
+
+.configBarSuperior {
+min-width: max-content;
+display: inline-block;
+max-width: 30%;
+}
+
+.contain, .configBtn {
     border: 2px solid black;
     flex-wrap: wrap;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.7em;
     height: 70%;
     width: 14%;
     color: var(--cor-fonte-botoes-nav, black);
@@ -38,10 +59,18 @@
     display: inline-flex;
 }
 
+.configBtn {
+    width: fit-content;
+    
+}
+
 .contain:hover{
     background-color: #dea575;
     text-shadow: #fcfbfa;
 }
+
+
+
 
 a:not(.contain) {
   
@@ -51,10 +80,14 @@ a:not(.contain) {
 
 
  </style>
-
-<div class="navBarSuperior">
-    <a class="contain" href="index.php" >Home</a>
-    <a class="contain" href="peixaria.php" >Peixaria</a>
-    <a class="contain" href="filmesFavoritos.php" >Filmes</a>
-
+<div class="navBarContainer">
+    <div class="navBarSuperior">
+        <a class="contain" href="index.php" >Home</a>
+        <a class="contain" href="peixaria.php" >Peixaria</a>
+        <a class="contain" href="filmesFavoritos.php" >Filmes</a>
+    </div>
+    <div class="configBarSuperior">
+        <button class="configBtn" type="reset">Limpar campos</button>
+        <button class="configBtn"onClick="#">Config.</button>
+    </div>
 </div>

@@ -5,26 +5,31 @@
     --cor-de-fundo: #FCE7C8;
     --cor-titulo: #D9A299;
     --fonte-titulo: Raleway;
+    --cor-fundo-elemento: #e9c8ad;
+    --altura-input: 1.6em;
 }
 
 body {
     background-color: var(--cor-de-fundo);
 }
 
-.caixa {
+.caixa, .lista {
   border-bottom: #0b0704;
   background-color: var(--cor-titulo);
   max-width: 100%;
-  
-  max-height: fit-content;
-  padding-bottom: 0.5pc;
-  padding-top: 0.5pc;
+  min-height:fit-content;
+  padding-bottom: 1.2em;
+  padding-top: 1pc;
+  padding-right: 1pc;
   padding-inline-start: 1pc;
   border-top-right-radius: 2em;
+  display: flex;
+  justify-content: center;
+  
 }
 
 .lista {
-  @extends .caixa;
+  
   display:block;
   border-top-right-radius: 0%;
   max-height: fit-content;
@@ -38,7 +43,7 @@ body {
    padding-top: 0.5pc;
   border-radius: 0.5em;
   font-size: large;
-  background-color: #e9c8ad;
+  background-color: var(--cor-fundo-elemento);
   border-style: inset;
   border-width: 3px;
   border-left-color: rgb(255, 255, 255);
@@ -61,10 +66,80 @@ div.title {
 textarea {
   resize: none;
   overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: auto;
   min-height:30px;
-  max-height: 80px;
-  max-width: 180px;
-  width: 180px;
+  max-height: 100px;
+  max-width: 60%;
+  width: 50%;
+  margin:5px;
+  border: 2px solid var(--cor-fundo-elemento, black);
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  font-size: 16px;
+}
+
+#descricaoContainer {
+  min-height: var(--altura-input);
+  max-width: min-content;
+  border: 1px ridge black;
+  display: contents;
+  min-inline-size: 40%;
+}
+label {
+  font-size: 18px;
+  
+}
+
+input, input[type=text], input[type=number], select, button {
+  width: 50%;
+  margin:5px;
+  border: 2px solid var(--cor-fundo-elemento, black);
+  border-radius: 10px;
+  min-height: var(--altura-input);
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  font-size: 16px;
+}
+
+input[type=text] {
+  /* Propriedades exclusivas do campo texto etc. */
+
+}
+
+input[type=number] {
+  /* Propriedades exclusivas do campo número etc. */
+
+}
+
+input:hover, textarea:hover, select, button {
+  border-color: #ab675d;
+}
+
+input:focus, textarea:focus {
+  border-color: #ab675d;
+  outline: hidden;
+  box-shadow: 0 0 0.7em #eee69d;
+}
+
+input[type="number"]::-webkit-inner-spin-button, /* Remove os botões de incremento do campo */
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+button {
+  max-width: fit-content;
+}
+button:active{
+  box-shadow: 0 0 0.7em #eee69d;
+}
+
+select {
+
 }
 
 /*

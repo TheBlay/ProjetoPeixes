@@ -12,21 +12,25 @@
 <body><?php  include_once 'header.php' ?><hr/>
     <div class='title'>Filmes</div>
         <div class="caixa">
-                <label for="nome">Nome do Filme</label>
-            <input id="nome" name="nome" placeholder="Nome do filme" required>
-                <label for="descricao">Descrição do Filme</label>
-            <textarea rows="2" cols="50" id="descricao" name="descricao" placeholder="Descrição do Filme" required></textarea>
-                <label for="genero">Gênero do Filme</label>
+                
+            <input type="text" id="nome" name="nome" placeholder="Nome do filme" required>
+            <div id="descricaoContainer">
+            
+            <textarea rows="6" cols="50" id="descricao" name="descricao" placeholder="Descrição do Filme" required></textarea>
+            </div>    
             
             <select name="genero" id="genero" required>
                 <option value="">Gênero...</option>
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="comedia">Comédia</option>
+                <option value="drama">Drama</option>
                 <option value="terror">Terror</option>
                 <option value="ficcao">Ficção Científica</option>
                 <option value="romance">Romance</option>
-                <option value="drama">Drama</option>
-                <option value="comedia">Comédia</option>
-                <option value="aventura">Aventura</option>
-                <option value="acao">Ação</option>
+                <option value="suspense">Suspense</option>
+                <option value="animacao">Animação</option>
+                <option value="musical">Musical</option>
             </select>
             
             <button type="button" onclick="cadastrarFilme()">Cadastrar Filme</button>
@@ -77,6 +81,7 @@
     .then(filme => {
             document.getElementById('listaFilmes').innerHTML =
                 filme.map(gerarHTML).join('');
+                
     })
     .catch(error => console.error('Erro: ', error));
     }
