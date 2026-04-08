@@ -19,7 +19,7 @@
     max-width: max-content;
     min-width: 100%;
     min-height: 60px;
-    justify-content: space-between;
+    justify-content: normal; /* space-around, strecth and normal*/
     
 }
 
@@ -34,7 +34,7 @@
     justify-content: space-around;
     align-content: space-around;
     display: flex;
-    gap: 6em;
+    gap: 5.5em;
     
 }
 
@@ -64,12 +64,16 @@ max-width: 30%;
     
 }
 
+img {
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+
 .contain:hover{
     background-color: #dea575;
     text-shadow: #fcfbfa;
 }
-
-
 
 
 a:not(.contain) {
@@ -80,7 +84,8 @@ a:not(.contain) {
 
 
  </style>
-<div class="navBarContainer">
+
+<div class="navBarContainer"><img src="favicon.ico">
     <div class="navBarSuperior">
         <a class="contain" href="index.php" >Home</a>
         <a class="contain" href="peixaria.php" >Peixaria</a>

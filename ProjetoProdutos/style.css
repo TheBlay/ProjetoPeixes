@@ -23,7 +23,7 @@ body {
   padding-right: 1pc;
   padding-inline-start: 1pc;
   border-top-right-radius: 2em;
-  display: flex;
+  display: flow;
   justify-content: center;
   
 }
@@ -106,15 +106,15 @@ input, input[type=text], input[type=number], select, button {
 
 input[type=text] {
   /* Propriedades exclusivas do campo texto etc. */
-
+  max-height:fit-content;
 }
 
 input[type=number] {
   /* Propriedades exclusivas do campo número etc. */
-
+  max-height: fit-content;
 }
 
-input:hover, textarea:hover, select, button {
+input:hover, textarea:hover, select:hover, button:hover {
   border-color: #ab675d;
 }
 
@@ -133,14 +133,22 @@ input[type="number"]::-webkit-outer-spin-button {
 
 button {
   max-width: fit-content;
+  max-height: fit-content;
+  vertical-align: baseline;
 }
 button:active{
   box-shadow: 0 0 0.7em #eee69d;
+  background-color: #e9c8ad;
+}
+button:hover{
+  box-shadow: 0.1em 0 0.3em #ab675d;
 }
 
 select {
 
 }
+
+
 
 /*
   
