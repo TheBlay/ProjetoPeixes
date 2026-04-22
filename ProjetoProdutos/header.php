@@ -2,9 +2,30 @@
 <link rel="stylesheet" href="style.css">
 
 </head>
-<script>localStorage.clear</script>
+<script>localStorage.clear();
+
+const topBtn = document.getElementById('topBtn');
+
+    window.addEventListener("scroll", () => {
+        if (document.documentElement.scrollTop > 100) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+        });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth" // Smooth scrolling
+      });
+    });
+
+</script>
 <style>
 :root {
+    --cor-de-fundo-container-nav: #FCE7C870;
     --cor-fundo-navbar: #C9B59C;
     --cor-botoes-nav: #DCC5B2;
     --fonte-botoes-nav: "Chango, sans-serif";
@@ -14,8 +35,8 @@
 .navBarContainer {
     display: grid;
     grid-auto-flow: column;
-    
-    gap:1em;
+    background-color: var(--cor-de-fundo-container-nav);
+    gap:5em;
     max-width: max-content;
     min-width: 100%;
     min-height: 60px;
@@ -70,11 +91,29 @@ img {
   height: 60px;
 }
 
-.contain:hover{
+#topBtn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      display: block;
+      padding: 10px 15px;
+      background: #dd7514;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+.contain:hover, #topBtn:hover{
     background-color: #dea575;
     text-shadow: #fcfbfa;
 }
 
+.navBarContainer{
+    position: fixed;
+    
+}
 
 a:not(.contain) {
   
@@ -90,9 +129,12 @@ a:not(.contain) {
         <a class="contain" href="index.php" >Home</a>
         <a class="contain" href="peixaria.php" >Peixaria</a>
         <a class="contain" href="filmesFavoritos.php" >Filmes</a>
+        <a class="contain" href="bonus.php">Bonus</a>
     </div>
     <div class="configBarSuperior">
         <button class="configBtn" type="reset">Limpar campos</button>
         <button class="configBtn"onClick="#">Config.</button>
     </div>
 </div>
+<hr/>
+<a id="topBtn" href="#" >Topo da Página</a>

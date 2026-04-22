@@ -29,9 +29,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
         exit;
     }
 }
-    // Retorna sempre a lista atualizada como JSON (GET ou POST)
+    
+
+
+
+
+// Retorna sempre a lista atualizada como JSON (GET ou POST)
     echo json_encode($filmes, JSON_UNESCAPED_UNICODE);
     exit;
-
-
 ?>

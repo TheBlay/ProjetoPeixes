@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Momo+Trust+Display&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --cor-de-fundo: #FCE7C8;
@@ -7,10 +8,28 @@
     --fonte-titulo: Raleway;
     --cor-fundo-elemento: #e9c8ad;
     --altura-input: 1.6em;
+    --fonte-exibicao-dados: Momo Trust Display;
 }
 
 body {
     background-color: var(--cor-de-fundo);
+}
+
+hr {
+  background-color: var(--cor-de-fundo);
+  border: none;
+  height: 1px;
+}
+
+div.title {
+    background: var(--cor-titulo);
+    font-family: var(--fonte-titulo, 'Times New Roman', Times, serif);
+    font-size: 3em;
+    padding-left: 1em;
+    border-top-right-radius: 3em;
+    max-width: 60%;
+    color: bisque;
+    margin-top: 70px;
 }
 
 .caixa, .lista {
@@ -40,28 +59,25 @@ body {
 
  div.elemento { 
   padding: 1vh;
-   padding-top: 0.5pc;
+  padding-top: 0;
   border-radius: 0.5em;
   font-size: large;
+  font-family: var(--fonte-exibicao-dados);
   background-color: var(--cor-fundo-elemento);
-  border-style: inset;
+  border-style: ridge;
   border-width: 3px;
   border-left-color: rgb(255, 255, 255);
-  width: 400px;
-  min-height: max-content;
-  max-height:500px;
+  width: 180vh;
+  max-width: 180vh;
+  min-width: 180vh;
+  min-height: 30vh;
+  max-height:400vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-gutter: auto;
 }
 
-div.title {
-    border-radius: 10;
-    background: var(--cor-titulo);
-    font-family: var(--fonte-titulo, 'Times New Roman', Times, serif);
-    font-size: 3em;
-    padding-left: 1em;
-    border-top-right-radius: 3em;
-    max-width: 60%;
-    color: bisque;
-}
 
 textarea {
   resize: none;
